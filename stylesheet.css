@@ -1,0 +1,394 @@
+:root{
+  --bg: #e6e6e6;
+  --brand: #f26522;
+  --accent: #ff8a50;
+  --brand-dark: #c94d15;
+  --card-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  --max-width: 1200px;
+  --page-padding: 20px;
+  --radius: 10px;
+  --text-color: #222;
+}
+
+/* Base */
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+  font-family: Arial, Helvetica, sans-serif; 
+}
+html,body {
+  height: 100%; 
+}
+body { 
+  background-color: var(--bg); 
+  color: var(--text-color); 
+  line-height: 1.4; 
+}
+
+
+/* Header / Nav */
+header {
+  background-color: var(--brand);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px clamp(20px,5vw, 60px);
+}
+.logo img { 
+  height: 60px; 
+  display:block; 
+}
+
+/* Nav links */
+nav {
+  display: flex;
+  flex-wrap: nowrap;
+}
+nav a {
+  text-decoration: none;
+  margin-left: 12px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
+  font-size: clamp(12px, 1vw, 16px);
+  white-space: nowrap;
+  font-weight: 700;
+  border: 2px solid var(--brand-dark);
+}
+nav a:hover,
+nav a:focus {
+  background: white;
+  color: var(--brand);
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+.nav-btn {
+  text-decoration: none;
+  margin-left: 15px;
+  padding: 10px 18px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
+  font-weight: bold;
+  border: 2px solid var(--brand-dark);
+  display: inline-block;
+}
+.nav-btn:hover,
+.nav-btn:focus {
+  background: white;
+  color: var(--brand);
+}
+
+/* Hero */
+.hero {
+  height: clamp(380px, 45vh, 550px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.55) 100%);
+  z-index: 0;
+}
+.hero-content { 
+  position: relative;
+  z-index: 1; 
+  padding: 0 clamp(12px, 5vw, 40px); 
+}
+.hero h1 {
+  font-size: clamp(28px, 4vw, 48px); 
+  margin-bottom: 12px; 
+}
+.hero p { 
+  margin-bottom: 18px; 
+  font-size: clamp(14px, 1.6vw, 18px); 
+}
+.hero-btn {
+  text-decoration: none;
+  padding: 10px 18px;
+  margin: 8px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  border: 2px solid var(--brand-dark);
+  display: inline-block;
+  transition: 0.25s ease;
+}
+.hero-btn:hover,
+.hero-btn:focus {
+  background: white;
+  color: var(--brand);
+}
+
+/* Page containers */
+main, .mission, .featured, .games {
+  width: min(90%, var(--max-width));
+  margin: 40px auto;
+}
+
+/* Mission */
+.mission {
+  background: #fff; 
+  padding: 28px; 
+  border-radius: var(--radius);
+}
+.mission h2 { 
+  margin-bottom: 12px;
+  font-size: 24px; 
+}
+
+/* Featured cards */
+.featured h2 { 
+  margin-bottom: 18px; 
+  font-size: 28px; 
+}
+.cards {
+  display:flex; 
+  gap:20px; 
+  align-items:stretch; 
+  flex-wrap:wrap; 
+}
+.card { 
+  background:#fff; 
+  flex:1 1 280px; 
+  box-shadow:var(--card-shadow); 
+  border-radius:8px; 
+  overflow:hidden; 
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.card:focus-within,
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+.card img {
+  width:100%; 
+  height:220px; 
+  object-fit:cover; 
+  display:block; 
+}
+.card h3 {
+  padding:14px; 
+  font-size:18px; 
+}
+
+/* Games */
+.games { 
+  display:flex; 
+  gap:20px; 
+  flex-wrap: wrap; 
+  justify-content:space-between; 
+}
+.games > div { flex:1 1 320px; 
+}
+.game-box { background:#fff; 
+  padding:18px; 
+  box-shadow:var(--card-shadow); 
+  border-radius:8px; 
+}
+
+footer { 
+  background: var(--brand); 
+  color: white; 
+  padding: 36px 40px 20px;
+}
+
+
+.footer-container { 
+  display: flex; 
+  align-items: flex-start;
+  justify-content: space-between;  
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-logo img {
+  height: 80px;
+  display: block;
+}
+
+.footer-columns {
+  display: flex;
+  gap: 30px;         
+}
+
+
+.footer-column {
+  min-width: 180px;
+}
+
+
+footer h3 { 
+  margin-bottom: 8px; 
+}
+
+footer p { 
+  margin-bottom: 6px; 
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Copyright */
+.copyright { 
+  text-align: center; 
+  font-weight: 700; 
+  margin-top: 15px;
+}
+
+/* Contact/Feedback Page */
+/* ===== Contact Layout ===== */
+
+.contact-wrapper {
+  background: #e6e6e6;
+  padding: 40px 20px 80px;
+}
+
+.contact-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+/* Cards */
+.contact-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.contact-card h2,
+.contact-card h3 {
+  margin-bottom: 10px;
+}
+
+.sub-text {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Form Styling */
+.contact-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-card label {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.contact-card input,
+.contact-card textarea {
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #ddd;
+  font-size: 14px;
+}
+
+.contact-card textarea {
+  height: 80px;
+  resize: none;
+}
+
+.send-btn {
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.send-btn:hover {
+  background: var(--brand-dark);
+}
+
+
+.contact-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.social-item i {
+  font-size: 22px;
+  color: var(--brand);
+}
+
+.social-link {
+  text-decoration: none;
+  color: #333;              
+  font-weight: 600;
+}
+
+
+.social-link:visited {
+  color: #333;
+}
+
+
+.social-link:hover {
+  color: var(--brand);     
+  text-decoration: underline;
+}
+
+
+.social-link:active {
+  color: var(--brand-dark);
+}
+
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Responsive tweaks */
+@media (max-width:720px){
+  header { flex-direction:column; 
+    gap:12px; 
+    align-items:flex-start; 
+  }
+  .cards { 
+    gap:12px; 
+  }
+  .hero { 
+    height: 360px; 
+  }
+  nav a { 
+    margin-left: 8px; 
+    padding:8px 12px; 
+  }
+}
+

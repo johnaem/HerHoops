@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Players' Stories — Her Hoops</title>
+
+<link rel="stylesheet" href="stylesheet3.css">
+<style>
+  .stories-hero {
+  background: url("storiesbanner.jpg") no-repeat center/cover;
+  height: clamp(380px, 45vh, 550px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.stories-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.55) 100%);
+  z-index: 0;
+}
+.stories-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 clamp(12px, 5vw, 40px);
+}
+.stories-hero h1 {
+  font-size: clamp(28px, 4vw, 48px);
+  margin-bottom: 12px;
+  color: white;
+}
+.stories-hero p {
+  margin-bottom: 18px;
+  font-size: clamp(14px, 1.6vw, 18px);
+  color: white;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html">
+    <img src="logo.png" alt="Her Hoops Logo">
+        </a>
+</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="NCAACollegeBasketball.html">NCAA College Basketball</a>
+        <a href="WNBACoverage.html">WNBA Coverage</a>
+        <a href="PlayersStories.html">Players' Stories</a>
+        <a href="Contact.html">Contact/Feedback</a>
+    </nav>
+</header>
+
+<!-- Hero -->
+  <section class="stories-hero">
+    <div class="stories-hero-content">
+        <h1>Players' and Their Stories</h1>
+        <p>Learn more about your favorite players</p>
+    </div>
+</section>
+ <br><br>
+
+<!-- Tab -->
+    <div class="tab">
+      <button class="tab active">All Players</button>
+  </div>
+   <br>
+
+  <!-- Cards -->
+  <main class="main-content">
+    <section class="cards-row">
+      <article class="player-card">
+        <div class="thumb">
+          <img src="paigebueckers.jpg" alt="Paige Bueckers" />
+        </div>
+        <div class="card-body">
+          <h3 class="player-name">Paige Bueckers</h3>
+          <ul class="player-info">
+            <li><strong>Position:</strong> Guard</li>
+            <li><strong>Height:</strong> 6-0</li>
+            <li><strong>Hometown:</strong> Hopkins, MI</li>
+            <li><strong>Current Team:</strong> Dallas Wings</li>
+          </ul>
+          <a class="card-cta" href="https://www.wnba.com/player/1642784/paige-bueckers/profile">Read More</a>
+        </div>
+      </article>
+
+      <article class="player-card">
+        <div class="thumb">
+          <img src="ajawilson.png" alt="A'ja Wilson" />
+        </div>
+        <div class="card-body">
+          <h3 class="player-name">A'ja Wilson</h3>
+          <ul class="player-info">
+            <li><strong>Position:</strong> Center</li>
+            <li><strong>Height:</strong> 6-4</li>
+            <li><strong>Hometown:</strong> Hopkins, SC</li>
+            <li><strong>Current Team:</strong> Las Vegas Aces</li>
+          </ul>
+          <a class="card-cta" href="https://www.wnba.com/player/1628932/aja-wilson">Read More</a>
+        </div>
+      </article>
+
+      <article class="player-card">
+        <div class="thumb">
+          <img src="joyceedwards.jpg" alt="Joyce Edwards" />
+        </div>
+        <div class="card-body">
+          <h3 class="player-name">Joyce Edwards</h3>
+          <ul class="player-info">
+            <li><strong>Position:</strong> Forward</li>
+            <li><strong>Height:</strong> 6-3</li>
+            <li><strong>Hometown:</strong> Camden, SC</li>
+            <li><strong>Current Team:</strong> South Carolina</li>
+          </ul>
+          <a class="card-cta" href="https://gamecocksonline.com/sports/wbball/roster/player/joyce-edwards/">Read More</a>
+        </div>
+      </article>
+
+<!-- NEW ROW -->
+
+    <article class="player-card">
+  <div class="thumb">
+    <img src="taniyalatson.webp" alt="Player Name" />
+  </div>
+  <div class="card-body">
+    <h3 class="player-name">Ta'Niya Latson</h3>
+    <ul class="player-info">
+      <li><strong>Position:</strong> Guard</li>
+      <li><strong>Height:</strong> 5-9</li>
+      <li><strong>Hometown:</strong> Miami, FL</li>
+      <li><strong>Current Team:</strong> South Carolina</li>
+    </ul>
+    <a class="card-cta" href="https://gamecocksonline.com/sports/wbball/roster/player/taniya-latson/">Read More</a>
+  </div>
+</article>
+
+<article class="player-card">
+  <div class="thumb">
+    <img src="napheesacollier.jpg" alt="Player Name" />
+  </div>
+  <div class="card-body">
+    <h3 class="player-name">Napheesa Collier</h3>
+    <ul class="player-info">
+      <li><strong>Position:</strong> Forward</li>
+      <li><strong>Height:</strong> 6-1</li>
+      <li><strong>Hometown:</strong> Jefferson City, MO</li>
+      <li><strong>Current Team:</strong> Minnesota Lynx</li>
+    </ul>
+    <a class="card-cta" href="https://www.wnba.com/player/1629483/napheesa-collier/profile">Read More</a>
+  </div>
+</article>
+
+<article class="player-card">
+  <div class="thumb">
+    <img src="ravenjohnson.avif" alt="Player Name" />
+  </div>
+  <div class="card-body">
+    <h3 class="player-name">Raven Johnson</h3>
+    <ul class="player-info">
+      <li><strong>Position:</strong> Guard</li>
+      <li><strong>Height:</strong> 5-9</li>
+      <li><strong>Hometown:</strong> Atlanta, GA</li>
+      <li><strong>Current Team:</strong> South Carolina</li>
+    </ul>
+    <a class="card-cta" href="https://gamecocksonline.com/sports/wbball/roster/player/raven-johnson/">Read More</a>
+  </div>
+</article>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+      <img src="logo.png" alt="Her Hoops Logo">
+    </div>
+        <div class="footer-column">
+    <h3>Quick Links</h3>
+    <p><a href="ncaacollegebasketball.html">NCAA College Basketball</a></p>
+    <p><a href="wnbacoverage.html">WNBA Coverage</a></p>
+    <p><a href="playerstories.html">Players' Stories</a></p>
+    <p><a href="contact.html">Contact/Feedback</a></p>
+    </div>
+        <div class="footer-column">
+    <h3>Social Media</h3>
+    <p><a href="https://www.instagram.com">Instagram</a></p>
+    <p><a href="https://www.tiktok.com">TikTok</a></p>
+</div>
+    </div>
+
+    <div class="copyright">
+        © 2026 Her Hoops. All rights reserved.
+    </div>
+</footer>
+    
+  </body>
+  </html>

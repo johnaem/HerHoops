@@ -1,0 +1,243 @@
+:root{
+  --bg: #e6e6e6;
+  --brand: #f26522;
+  --accent: #ff8a50;
+  --brand-dark: #c94d15;
+  --card-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  --max-width: 1200px;
+  --page-padding: 20px;
+  --radius: 10px;
+  --text-color: #222;
+}
+
+/* Base */
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+  font-family: Arial, Helvetica, sans-serif; 
+}
+html,body {
+  height: 100%; 
+}
+body { 
+  background-color: var(--bg); 
+  color: var(--text-color); 
+  line-height: 1.4; 
+}
+
+
+/* Header / Nav */
+header {
+  background-color: var(--brand);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px clamp(20px,5vw, 60px);
+}
+.logo img { 
+  height: 60px; 
+  display:block; 
+}
+
+/* Nav links */
+nav {
+  display: flex;
+  flex-wrap: nowrap;
+}
+nav a {
+  text-decoration: none;
+  margin-left: 12px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
+  font-size: clamp(12px, 1vw, 16px);
+  white-space: nowrap;
+  font-weight: 700;
+  border: 2px solid var(--brand-dark);
+}
+nav a:hover,
+nav a:focus {
+  background: white;
+  color: var(--brand);
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+.nav-btn {
+  text-decoration: none;
+  margin-left: 15px;
+  padding: 10px 18px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
+  font-weight: bold;
+  border: 2px solid var(--brand-dark);
+  display: inline-block;
+}
+.nav-btn:hover,
+.nav-btn:focus {
+  background: white;
+  color: var(--brand);
+}
+
+/* Tabs - pill */
+
+.tab {
+    display:flex; 
+    gap:12px; 
+    justify-content:center}
+
+
+.tab.active{
+  background:linear-gradient(var(--accent), #f9a07a);
+  color:white;
+  border-color:var(--brand-dark);
+  padding:14px 28px;
+  border-radius:30px;
+  font-size: 18px;   
+  border: 2px solid var(--brand-dark);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+
+}
+
+/* MAIN / CARDS */
+.main-content{
+    max-width:var(--container); 
+    margin:20px auto; 
+    padding:0 18px 40px
+}
+
+.cards-row{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:28px;
+  align-items:start;
+}
+
+/* Card */
+.player-card{
+  background:white;
+  border-radius:10px;
+  overflow:hidden;
+  border:1px solid #ddd;
+  box-shadow:var(--card-shadow);
+  display:flex;
+  flex-direction:column;
+}
+.thumb{
+  position:relative;
+  height:220px;
+  overflow:hidden;
+  background:#111;
+}
+.thumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.card-body{
+  padding:12px
+}
+
+.player-name{
+  font-size:18px;
+  margin:6px 0;
+  font-weight:800;
+}
+.player-info{
+  list-style:none;
+  margin:0;
+  padding:0;
+  border-top:2px solid #eee;
+  margin-top:8px;
+  padding-top:8px;
+}
+.player-info li{
+  font-size:13px;
+  margin-bottom:6px;
+  color:#333;
+}
+
+/* CTA inside card */
+.card-cta{
+  display:inline-block;
+  margin-top:10px;
+  background:var(--accent);
+  color:white;
+  text-decoration:none;
+  padding:8px 12px;
+  border-radius:8px;
+  font-weight:700;
+  border:2px solid var(--brand);
+}
+
+
+footer { 
+  background: var(--brand); 
+  color: white; 
+  padding: 36px 40px 15px;
+}
+
+/* Main footer layout */
+.footer-container { 
+  display: flex; 
+  align-items: flex-start;
+  justify-content: space-between;  
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-logo img {
+  height: 80px;
+  display: block;
+}
+
+.footer-columns {
+  display: flex;
+  gap: 30px;         
+}
+
+
+.footer-column {
+  min-width: 180px;
+}
+
+
+footer h3 { 
+  margin-bottom: 8px; 
+}
+
+footer p { 
+  margin-bottom: 6px; 
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Copyright */
+.copyright { 
+  text-align: center; 
+  font-weight: 700; 
+  margin-top: 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width:1000px){
+  .cards-row{grid-template-columns:repeat(2, 1fr)}
+}
+@media (max-width:680px){
+  .header-inner{padding:12px 14px}
+  .cards-row{grid-template-columns:1fr}
+  .hero.ncaa-hero{height:180px}
+  .thumb{height:180px}
+  .main-nav{gap:8px}
+  .nav-btn{padding:7px 10px; font-size:13px}
+}

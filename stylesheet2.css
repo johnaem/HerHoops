@@ -1,0 +1,298 @@
+:root{
+  --bg: #e6e6e6;
+  --brand: #f26522;
+  --accent: #ff8a50;
+  --brand-dark: #c94d15;
+  --card-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  --max-width: 1200px;
+  --page-padding: 20px;
+  --radius: 10px;
+  --text-color: #222;
+}
+
+/* Base */
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+  font-family: Arial, Helvetica, sans-serif; 
+}
+html,body {
+  height: 100%; 
+}
+body { 
+  background-color: var(--bg); 
+  color: var(--text-color); 
+  line-height: 1.4; 
+}
+
+
+/* Header / Nav */
+header {
+  background-color: var(--brand);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px clamp(20px,5vw, 60px);
+}
+.logo img { 
+  height: 60px; 
+  display:block; 
+}
+
+/* Nav links */
+nav {
+  display: flex;
+  flex-wrap: nowrap;
+}
+nav a {
+  text-decoration: none;
+  margin-left: 12px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
+  font-size: clamp(12px, 1vw, 16px);
+  white-space: nowrap;
+  font-weight: 700;
+  border: 2px solid var(--brand-dark);
+}
+nav a:hover,
+nav a:focus {
+  background: white;
+  color: var(--brand);
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+.nav-btn {
+  text-decoration: none;
+  margin-left: 15px;
+  padding: 10px 18px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
+  font-weight: bold;
+  border: 2px solid var(--brand-dark);
+  display: inline-block;
+}
+.nav-btn:hover,
+.nav-btn:focus {
+  background: white;
+  color: var(--brand);
+}
+
+
+
+/* NCAA Page*/
+
+/* Tabs */
+.tabs-wrap{
+  max-width:var(--maxw);
+  margin:18px auto;
+  padding:0 16px;
+}
+.tabs {
+  display: flex;
+  gap: 8px;
+  justify-content: center;   
+  align-items: center;
+}
+
+.tab{
+  padding:8px 16px;
+  border-radius:20px;
+  background:white;
+  border:1px solid #ccc;
+  font-weight:bold;
+  cursor:pointer;
+}
+.tab.active{
+  background:var(--accent);
+  color:white;
+  border-color:var(--brand);
+}
+
+/* Content Box */
+.panel{
+  max-width:var(--maxw);
+  margin:12px auto;
+  padding:0 16px;
+}
+.box{
+  background:white;
+  padding:16px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+/* Table */
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+th,td{
+  padding:10px;
+  border-bottom:1px solid #eee;
+  text-align:left;
+}
+tbody tr:nth-child(even){
+  background:#fafafa;
+}
+
+#recent ul {
+  list-style: none;        
+  padding: 0;
+  margin: 0;
+  display: flex;          
+  gap: 30px;               
+  flex-wrap: wrap;         
+}
+
+#recent li {
+  font-weight: 400px ;
+}
+
+
+.empty-message{
+  text-align:center;
+  padding:25px 0;
+  font-weight:600;
+  color:#666;
+}
+
+/* Highlights Section */
+.cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;          
+}
+.highlights {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 16px;
+}
+
+.highlights-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  text-align: center;  
+}
+
+/* Card */
+.highlight-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Smaller thumbnail */
+.thumbnail {
+  position: relative;
+  height: 150px;   
+  overflow: hidden;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   
+}
+
+/* Card content */
+.card-body {
+  padding: 12px;
+}
+
+.card-body h3 {
+  font-size: 16px;
+  margin: 0 0 10px 0;
+}
+
+/* Button */
+.cta {
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: bold;
+  border: 2px solid var(--brand);
+}
+
+/* Makes it stack when screen shrinks */
+@media (max-width: 900px) {
+  .cards-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* WNBA Coverage Page */
+
+
+
+footer { 
+  background: var(--brand); 
+  color: white; 
+  padding: 36px 40px 20px;
+}
+
+
+.footer-container { 
+  display: flex; 
+  align-items: flex-start;
+  justify-content: space-between;  
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-logo img {
+  height: 80px;
+  display: block;
+}
+
+.footer-columns {
+  display: flex;
+  gap: 30px;         
+}
+
+
+.footer-column {
+  min-width: 180px;
+}
+
+
+footer h3 { 
+  margin-bottom: 8px; 
+}
+
+footer p { 
+  margin-bottom: 6px; 
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Copyright */
+.copyright { 
+  text-align: center; 
+  font-weight: 700; 
+  margin-top: 15px;
+}

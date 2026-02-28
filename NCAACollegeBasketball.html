@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NCAA College Basketball — Her Hoops</title>
+
+<link rel="stylesheet" href="stylesheet2.css">
+<style>
+  .ncaa-hero {
+  background: url("college banner.png") no-repeat center/cover;
+  height: clamp(380px, 45vh, 550px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.ncaa-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.55) 100%);
+  z-index: 0;
+}
+.ncaa-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 clamp(12px, 5vw, 40px);
+}
+.ncaa-hero h1 {
+  font-size: clamp(28px, 4vw, 48px);
+  margin-bottom: 12px;
+}
+.ncaa-hero p {
+  margin-bottom: 18px;
+  font-size: clamp(14px, 1.6vw, 18px);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html">
+    <img src="logo.png" alt="Her Hoops Logo">
+        </a>
+</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="NCAACollegeBasketball.html">NCAA College Basketball</a>
+        <a href="WNBACoverage.html">WNBA Coverage</a>
+        <a href="PlayersStories.html">Players' Stories</a>
+        <a href="Contact.html">Contact/Feedback</a>
+    </nav>
+</header>
+
+<!-- Hero -->
+  <section class="ncaa-hero">
+    <div class="ncaa-hero-content">
+        <h1>NCAA Women's Basketball</h1>
+        <p>Team rankings, highlights and transfer portal coverage</p>
+    </div>
+</section>
+
+
+<!-- Nav Tabs -->
+<div class="tabs-wrap">
+  <div class="tabs">
+    <button class="tab active" data-panel="rankings">Team Rankings</button>
+    <button class="tab" data-panel="recent">Recent Games</button>
+    <button class="tab" data-panel="transfer">Transfer Portal</button>
+  </div>
+</div>
+
+<!-- Panel -->
+<div class="panel">
+
+  <!-- Rankings -->
+  <div id="rankings" class="box panel-item">
+    <table>
+      <thead>
+        <tr>
+          <th>Rank No.</th>
+          <th>Team</th>
+          <th>Conference</th>
+          <th>Record</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>UConn</td><td>ACC</td><td>25–0</td></tr>
+        <tr><td>2</td><td>UCLA</td><td>Big Ten</td><td>23–1</td></tr>
+        <tr><td>3</td><td>South Carolina</td><td>SEC</td><td>24–2</td></tr>
+        <tr><td>4</td><td>Texas</td><td>SEC</td><td>22–2</td></tr>
+        <tr><td>5</td><td>Vanderbilt</td><td>SEC</td><td>22–2</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Recent Games -->
+  <div id="recent" class="box panel-item" style="display:none">
+    <h3>Recent Game Scores</h3>
+    <br>
+    <ul>
+      <li> South Carolina 79 — LSU 72</li>
+      <li> UConn 71 — Marq 56</li>
+      <li> Texas 65 — Tennessee 63</li>
+    </ul>
+  </div>
+
+  <!-- Transfer Portal -->
+  <div id="transfer" class="box panel-item" style="display:none">
+    <h3>Transfer Portal</h3>
+    <p class="empty-message">
+      No transfer portal updates at this time. Check back soon!
+    </p>
+  </div>
+
+</div>
+<br><br>
+
+
+<!-- Highlights -->
+<h2 class="highlights-title">Game Highlights</h2>
+<div class="cards-row">
+  <article class="highlight-card">
+    <div class="thumbnail">
+      <img src="game1.png" alt="LSU vs Auburn highlight">
+      <span class="duration">7:12</span>
+    </div>
+    <div class="card-body">
+      <h3>LSU Tigers vs. Auburn Tigers — Full Game Highlights</h3>
+      <a class="cta" href="#">Click Here to Watch</a>
+    </div>
+  </article>
+
+  <article class="highlight-card">
+    <div class="thumbnail">
+      <img src="game2.png" alt="Oklahoma vs Vanderbilt highlight">
+      <span class="duration">11:00</span>
+    </div>
+    <div class="card-body">
+      <h3>Oklahoma Sooners vs. Vanderbilt Commodores — Full Game Highlights</h3>
+      <a class="cta" href="#">Click Here to Watch</a>
+    </div>
+  </article>
+
+  <article class="highlight-card">
+    <div class="thumbnail">
+      <img src="game3.png" alt="South Carolina vs LSU highlight">
+      <span class="duration">9:45</span>
+    </div>
+    <div class="card-body">
+      <h3>South Carolina Gamecocks vs. LSU Tigers — Full Game Highlights</h3>
+      <a class="cta" href="#">Click Here to Watch</a>
+    </div>
+  </article>
+
+</div>
+<br><br><br><br><br><br>
+
+  <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+      <img src="logo.png" alt="Her Hoops Logo">
+    </div>
+        <div class="footer-column">
+    <h3>Quick Links</h3>
+    <p><a href="ncaacollegebasketball.html">NCAA College Basketball</a></p>
+    <p><a href="wnbacoverage.html">WNBA Coverage</a></p>
+    <p><a href="playerstories.html">Players' Stories</a></p>
+    <p><a href="contact.html">Contact/Feedback</a></p>
+    </div>
+        <div class="footer-column">
+    <h3>Social Media</h3>
+    <p><a href="https://www.instagram.com">Instagram</a></p>
+    <p><a href="https://www.tiktok.com">TikTok</a></p>
+</div>
+    </div>
+
+    <div class="copyright">
+        © 2026 Her Hoops. All rights reserved.
+    </div>
+</footer>
+
+<script>
+document.querySelectorAll('.tab').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const panel = btn.dataset.panel;
+    document.querySelectorAll('.panel-item').forEach(p=>{
+      p.style.display = p.id === panel ? '' : 'none';
+    });
+  });
+});
+</script>
+
+</body>
+</html>

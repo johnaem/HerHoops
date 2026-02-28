@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Her Hoops</title>
+<link rel="stylesheet" href="stylesheet.css">
+<style>
+    .index-hero {
+  background: url("homepage banner.jpg") no-repeat center/cover;
+  height: clamp(380px, 45vh, 550px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.index-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.55) 100%);
+  z-index: 0;
+}
+.index-hero-content { 
+  position: relative;
+  z-index: 1; 
+  padding: 0 clamp(12px, 5vw, 40px); 
+}
+.index-hero h1 {
+  font-size: clamp(28px, 4vw, 48px); 
+  margin-bottom: 12px; 
+}
+.index-hero p { 
+  margin-bottom: 18px; 
+  font-size: clamp(14px, 1.6vw, 18px); 
+}
+.index-hero-btn {
+  text-decoration: none;
+  padding: 10px 18px;
+  margin: 8px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  border: 2px solid var(--brand-dark);
+  display: inline-block;
+  transition: 0.25s ease;
+}
+.index-hero-btn:hover,
+.index-hero-btn:focus {
+  background: white;
+  color: var(--brand);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <div class="logo">
+        <a href="index.html">
+    <img src="logo.png" alt="Her Hoops Logo">
+        </a>
+</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="NCAACollegeBasketball.html">NCAA College Basketball</a>
+        <a href="WNBACoverage.html">WNBA Coverage</a>
+        <a href="PlayersStories.html">Players' Stories</a>
+        <a href="Contact.html">Contact/Feedback</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="index-hero">
+    <div class="index-hero-content">
+        <h1>Welcome to <br>Her Hoops</h1>
+        <p>Your destination for coverage of women's basketball — from college courts to the WNBA</p>
+        <a href="NCAACollegeBasketball.html" class="hero-btn">College Basketball</a>
+        <a href="WNBACoverage.html" class="hero-btn">WNBA</a>
+    </div>
+</section>
+
+<!-- MISSION -->
+<section class="mission">
+    <h2><img src="trophy.png" style="height: 40px; width: auto; vertical-align: middle; margin-right: 8px;">Our Mission</h2>
+    <p>
+        Here at Her Hoops, we are dedicated to celebrating women’s basketball at every level.
+        From NCAA tournaments to WNBA championships, we provide in-depth coverage, player highlights,
+        and featured stories. Join us in supporting the growth of women’s basketball!
+    </p>
+</section>
+
+<!-- FEATURED STORIES -->
+<section class="featured">
+    <h2>Featured Stories</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="aces.avif" alt="Las Vegas Aces Basketball Team">
+            <h3>The Las Vegas Aces win their 3rd WNBA Championship in 4 seasons</h3>
+        </div>
+        <div class="card">
+            <img src="taniya.webp" alt="Ta'Niya Latson">
+            <h3>Latson, Edwards lead No. 3 South Carolina to 93-50 win over No. 19 Tennessee</h3>
+        </div>
+        <div class="card">
+            <img src="unrivaled.jpeg" alt="Unrivaled League">
+            <h3>The Unrivaled League continues to gain viewers</h3>
+        </div>
+    </div>
+</section>
+<br><br>
+<!-- GAMES -->
+<section class="games">
+    <div>
+        <h2>Upcoming College Games</h2>
+        <div class="game-box">
+            <p>South Carolina vs. LSU<br>2/14 @ 8:30PM</p>
+            <br>
+            <p>Vanderbilt vs. Georgia<br>2/15 @ 12:00PM</p>
+        </div>
+    </div>
+
+    <div>
+        <h2>Lastest WNBA Games</h2>
+        <div class="game-box">
+            <p><strong>No Games</strong></p>
+        </div>
+    </div>
+</section>
+    <br>
+
+  <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+      <img src="logo.png" alt="Her Hoops Logo">
+    </div>
+        <div class="footer-column">
+    <h3>Quick Links</h3>
+    <p><a href="ncaacollegebasketball.html">NCAA College Basketball</a></p>
+    <p><a href="wnbacoverage.html">WNBA Coverage</a></p>
+    <p><a href="playerstories.html">Players' Stories</a></p>
+    <p><a href="contact.html">Contact/Feedback</a></p>
+    </div>
+        <div class="footer-column">
+    <h3>Social Media</h3>
+    <p><a href="https://www.instagram.com">Instagram</a></p>
+    <p><a href="https://www.tiktok.com">TikTok</a></p>
+</div>
+    </div>
+
+    <div class="copyright">
+        © 2026 Her Hoops. All rights reserved.
+    </div>
+</footer>
+
+</body>
+</html>
