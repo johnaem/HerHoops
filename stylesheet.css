@@ -1,6 +1,6 @@
 :root{
-  --bg: #e66712;
-  --brand: #CC5500;
+  --bg: #e6e6e6;
+  --brand: #f26522;
   --accent: #ff8a50;
   --brand-dark: #c94d15;
   --card-shadow: 0 4px 10px rgba(0,0,0,0.12);
@@ -21,7 +21,7 @@ html,body {
   height: 100%; 
 }
 body { 
-  background-color: var(--bg #e66712); 
+  background-color: var(--bg); 
   color: var(--text-color); 
   line-height: 1.4; 
 }
@@ -391,6 +391,7 @@ footer a:hover {
     padding:8px 12px; 
   }
 }
+
 
 
 
