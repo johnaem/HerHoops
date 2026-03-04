@@ -21,7 +21,7 @@ html,body {
   height: 100%; 
 }
 body { 
-  background-color: var(--bg #C2410C); 
+  background-color: var(--bg); 
   color: var(--text-color); 
   line-height: 1.4; 
 }
@@ -391,6 +391,7 @@ footer a:hover {
     padding:8px 12px; 
   }
 }
+
 
 
 
