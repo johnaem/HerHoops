@@ -1,8 +1,8 @@
 :root{
   --bg: #e6e6e6;
-  --brand: #f26522;
-  --accent: #ff8a50;
-  --brand-dark: #c94d15;
+  --brand: #f86300;
+  --accent: #ff7a22;
+  --brand-dark: #db4b07ef;
   --card-shadow: 0 4px 10px rgba(0,0,0,0.12);
   --max-width: 1200px;
   --page-padding: 20px;
@@ -295,4 +295,5 @@ footer a:hover {
   text-align: center; 
   font-weight: 700; 
   margin-top: 15px;
+
 }
