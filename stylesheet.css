@@ -1,5 +1,5 @@
 :root{
-  --bg: #EF5B0C;
+  --bg: #F25912;
   --brand: #f26522;
   --accent: #ff8a50;
   --brand-dark: #c94d15;
@@ -391,6 +391,7 @@ footer a:hover {
     padding:8px 12px; 
   }
 }
+
 
 
 
