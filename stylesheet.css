@@ -1,6 +1,6 @@
 :root{
   --bg: #CC5500;
-  --brand: #f26522;
+  --brand: #CC5500;
   --accent: #ff8a50;
   --brand-dark: #c94d15;
   --card-shadow: 0 4px 10px rgba(0,0,0,0.12);
@@ -391,5 +391,6 @@ footer a:hover {
     padding:8px 12px; 
   }
 }
+
 
 
