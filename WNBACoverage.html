@@ -9,12 +9,15 @@
 
   <style>
     .WNBA-hero {
-      background: url("images/wnbabanner.jpg") no-repeat center/cover;
-      padding: 4rem 1rem;
-      position: relative;
-      overflow: hidden;
-      color: white;
-    }
+  background: url("images/wnbabanner.jpg") no-repeat center;
+  background-size: contain;
+  background-color: #000; /* or another matching color */
+  padding: 4rem 1rem;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  min-height: 300px; /* optional */
+}
 
     .WNBA-hero::before {
       content: "";
