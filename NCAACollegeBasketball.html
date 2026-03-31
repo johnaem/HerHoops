@@ -1,181 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NCAA College Basketball — Her Hoops</title>
-  <link rel="stylesheet" href="stylesheet2.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NCAA College Basketball — Her Hoops</title>
+
+<link rel="stylesheet" href="stylesheet2.css">
+<style>
+  .ncaa-hero {
+  background: url("college banner.png") no-repeat center/cover;
+  height: clamp(380px, 45vh, 550px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.ncaa-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.55) 100%);
+  z-index: 0;
+}
+.ncaa-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 clamp(12px, 5vw, 40px);
+}
+.ncaa-hero h1 {
+  font-size: clamp(28px, 4vw, 48px);
+  margin-bottom: 12px;
+}
+.ncaa-hero p {
+  margin-bottom: 18px;
+  font-size: clamp(14px, 1.6vw, 18px);
+}
+
+</style>
 </head>
 
 <body>
-  <header class="site-header">
+
+<header>
     <div class="logo">
-      <a href="index.html">
-        <img src="images/logo.png" alt="Her Hoops Logo">
-      </a>
-    </div>
-
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="NCAACollegeBasketball.html">NCAA College Basketball</a>
-      <a href="WNBACoverage.html">WNBA Coverage</a>
-      <a href="PlayersStories.html">Players' Stories</a>
-      <a href="Contact.html">Contact/Feedback</a>
+        <a href="index.html">
+    <img src="logo.png" alt="Her Hoops Logo">
+        </a>
+</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="NCAACollegeBasketball.html">NCAA College Basketball</a>
+        <a href="WNBACoverage.html">WNBA Coverage</a>
+        <a href="PlayersStories.html">Players' Stories</a>
+        <a href="Contact.html">Contact/Feedback</a>
     </nav>
-  </header>
+</header>
 
-  <main>
-    <section class="ncaa-hero">
-      <div class="ncaa-hero-content">
+<!-- Hero -->
+  <section class="ncaa-hero">
+    <div class="ncaa-hero-content">
         <h1>NCAA Women's Basketball</h1>
         <p>Team rankings, highlights and transfer portal coverage</p>
+    </div>
+</section>
+
+
+<!-- Nav Tabs -->
+<div class="tabs-wrap">
+  <div class="tabs">
+    <button class="tab active" data-panel="rankings">Team Rankings</button>
+    <button class="tab" data-panel="recent">Recent Games</button>
+    <button class="tab" data-panel="transfer">Transfer Portal</button>
+  </div>
+</div>
+
+<!-- Panel -->
+<div class="panel">
+
+  <!-- Rankings -->
+  <div id="rankings" class="box panel-item">
+    <table>
+      <thead>
+        <tr>
+          <th>Rank No.</th>
+          <th>Team</th>
+          <th>Conference</th>
+          <th>Record</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>UConn</td><td>ACC</td><td>25–0</td></tr>
+        <tr><td>2</td><td>UCLA</td><td>Big Ten</td><td>23–1</td></tr>
+        <tr><td>3</td><td>South Carolina</td><td>SEC</td><td>24–2</td></tr>
+        <tr><td>4</td><td>Texas</td><td>SEC</td><td>22–2</td></tr>
+        <tr><td>5</td><td>Vanderbilt</td><td>SEC</td><td>22–2</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Recent Games -->
+  <div id="recent" class="box panel-item" style="display:none">
+  <h3>Recent Game Scores</h3>
+
+  <div class="score-grid">
+    <div class="score-card">
+      <div class="score-teams">
+        <span class="team">South Carolina</span>
+        <span class="score">79</span>
       </div>
-    </section>
-
-    <section class="tabs-wrap" aria-label="Content tabs">
-      <div class="tabs">
-        <button class="tab active" type="button" data-panel="rankings">Team Rankings</button>
-        <button class="tab" type="button" data-panel="recent">Recent Games</button>
-        <button class="tab" type="button" data-panel="transfer">Transfer Portal</button>
+      <div class="score-teams">
+        <span class="team">LSU</span>
+        <span class="score">72</span>
       </div>
-    </section>
-
-    <section class="panel">
-      <div id="rankings" class="box panel-item">
-        <div class="table-card">
-          <table>
-            <thead>
-              <tr>
-                <th>Rank No.</th>
-                <th>Team</th>
-                <th>Conference</th>
-                <th>Record</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td data-label="Rank No.">1</td>
-                <td data-label="Team">UConn</td>
-                <td data-label="Conference">ACC</td>
-                <td data-label="Record">31–0</td>
-              </tr>
-              <tr>
-                <td data-label="Rank No.">2</td>
-                <td data-label="Team">UCLA</td>
-                <td data-label="Conference">Big Ten</td>
-                <td data-label="Record">28–1</td>
-              </tr>
-              <tr>
-                <td data-label="Rank No.">3</td>
-                <td data-label="Team">South Carolina</td>
-                <td data-label="Conference">SEC</td>
-                <td data-label="Record">29–2</td>
-              </tr>
-              <tr>
-                <td data-label="Rank No.">4</td>
-                <td data-label="Team">Texas</td>
-                <td data-label="Conference">SEC</td>
-                <td data-label="Record">28–2</td>
-              </tr>
-              <tr>
-                <td data-label="Rank No.">5</td>
-                <td data-label="Team">Vanderbilt</td>
-                <td data-label="Conference">SEC</td>
-                <td data-label="Record">27–2</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div id="recent" class="box panel-item is-hidden">
-        <h3>Recent Game Scores</h3>
-        <ul class="score-list">
-          <li>Kentucky 94 - Arkansas 64 (SEC Tournament 1st Round)</li>
-          <li>UCLA 73 - USC 50</li>
-          <li>Notre Dame 65 - Louisville 62</li>
-        </ul>
-      </div>
-
-      <div id="transfer" class="box panel-item is-hidden">
-        <h3>Transfer Portal</h3>
-        <p class="empty-message">No transfer portal updates at this time. Check back soon!</p>
-      </div>
-    </section>
-
-    <section class="highlights">
-      <h2 class="highlights-title">Game Highlights</h2>
-
-      <div class="cards-row">
-        <article class="highlight-card">
-          <div class="thumbnail">
-            <img src="images/game1.png" alt="LSU vs Auburn highlight">
-          </div>
-          <div class="card-body">
-            <h3>LSU Tigers vs. Auburn Tigers — Full Game Highlights</h3>
-            <a class="cta" href="https://www.youtube.com/watch?v=ps1PshcwTmg">Click Here to Watch</a>
-          </div>
-        </article>
-
-        <article class="highlight-card">
-          <div class="thumbnail">
-            <img src="images/game2.png" alt="Oklahoma vs Vanderbilt highlight">
-          </div>
-          <div class="card-body">
-            <h3>Oklahoma Sooners vs. Vanderbilt Commodores — Full Game Highlights</h3>
-            <a class="cta" href="https://www.youtube.com/watch?v=9d86URIUkKM">Click Here to Watch</a>
-          </div>
-        </article>
-
-        <article class="highlight-card">
-          <div class="thumbnail">
-            <img src="images/game3.png" alt="South Carolina vs LSU highlight">
-          </div>
-          <div class="card-body">
-            <h3>South Carolina Gamecocks vs. LSU Tigers — Full Game Highlights</h3>
-            <a class="cta" href="https://www.youtube.com/watch?v=UYVqqzo1Cok">Click Here to Watch</a>
-          </div>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-logo">
-        <img src="images/logo.png" alt="Her Hoops Logo">
-      </div>
-
-      <div class="footer-column">
-        <h3>Quick Links</h3>
-        <p><a href="#">NCAA College Basketball</a></p>
-        <p><a href="WNBACoverage.html">WNBA Coverage</a></p>
-        <p><a href="PlayersStories.html">Players' Stories</a></p>
-        <p><a href="Contact.html">Contact/Feedback</a></p>
-      </div>
-
-      <div class="footer-column">
-        <h3>Social Media</h3>
-        <p><a href="https://www.instagram.com">Instagram</a></p>
-        <p><a href="https://www.tiktok.com">TikTok</a></p>
-      </div>
+      <p class="score-note">South Carolina wins by 7</p>
     </div>
 
-    <div class="copyright">© 2026 Her Hoops. All rights reserved.</div>
-  </footer>
+    <div class="score-card">
+      <div class="score-teams">
+        <span class="team">UConn</span>
+        <span class="score">71</span>
+      </div>
+      <div class="score-teams">
+        <span class="team">Marquette</span>
+        <span class="score">56</span>
+      </div>
+      <p class="score-note">UConn wins by 15</p>
+    </div>
 
-  <script>
-    document.querySelectorAll('.tab').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+    <div class="score-card">
+      <div class="score-teams">
+        <span class="team">Texas</span>
+        <span class="score">65</span>
+      </div>
+      <div class="score-teams">
+        <span class="team">Tennessee</span>
+        <span class="score">63</span>
+      </div>
+      <p class="score-note">Texas wins by 2</p>
+    </div>
+  </div>
+</div>
 
-        const panel = btn.dataset.panel;
-        document.querySelectorAll('.panel-item').forEach(p => {
-          p.classList.toggle('is-hidden', p.id !== panel);
-        });
-      });
+  <!-- Transfer Portal -->
+  <div id="transfer" class="box panel-item" style="display:none">
+    <h3>Transfer Portal</h3>
+    <p class="empty-message">
+      No transfer portal updates at this time. Check back soon!
+    </p>
+  </div>
+
+</div>
+<br><br>
+
+<!-- Highlights -->
+<h2 class="highlights-title">Game Highlights</h2>
+<div class="cards-row">
+  <article class="highlight-card">
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/watch?v=UYVqqzo1Cok"
+        title="LSU vs Auburn Highlights"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  <div class="card-body">
+    <h3>LSU Tigers vs. Auburn Tigers — Full Game Highlights</h3>
+    <br><a class="cta" href="https://www.youtube.com/watch?v=UYVqqzo1Cok">Click Here to Watch</a>
+    
+    
+
+  </div>
+</article>
+
+  <article class="highlight-card">
+    <div class="thumbnail">
+      <img src="game2.png" alt="Oklahoma vs Vanderbilt highlight">
+      <span class="duration">11:00</span>
+    </div>
+    <div class="card-body">
+      <h3>Oklahoma Sooners vs. Vanderbilt Commodores — Full Game Highlights</h3>
+      <a class="cta" href="#">Click Here to Watch</a>
+    </div>
+  </article>
+
+  <article class="highlight-card">
+    <div class="thumbnail">
+      <img src="game3.png" alt="South Carolina vs LSU highlight">
+      <span class="duration">9:45</span>
+    </div>
+    <div class="card-body">
+      <h3>South Carolina Gamecocks vs. LSU Tigers — Full Game Highlights</h3>
+      <a class="cta" href="#">Click Here to Watch</a>
+    </div>
+  </article>
+
+</div>
+<br><br><br><br><br><br>
+
+  <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+      <img src="logo.png" alt="Her Hoops Logo">
+    </div>
+        <div class="footer-column">
+    <h3>Quick Links</h3>
+    <p><a href="ncaacollegebasketball.html">NCAA College Basketball</a></p>
+    <p><a href="wnbacoverage.html">WNBA Coverage</a></p>
+    <p><a href="playerstories.html">Players' Stories</a></p>
+    <p><a href="contact.html">Contact/Feedback</a></p>
+    </div>
+        <div class="footer-column">
+    <h3>Social Media</h3>
+    <p><a href="https://www.instagram.com">Instagram</a></p>
+    <p><a href="https://www.tiktok.com">TikTok</a></p>
+</div>
+    </div>
+
+    <div class="copyright">
+        © 2026 Her Hoops. All rights reserved.
+    </div>
+</footer>
+
+<script>
+document.querySelectorAll('.tab').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const panel = btn.dataset.panel;
+    document.querySelectorAll('.panel-item').forEach(p=>{
+      p.style.display = p.id === panel ? '' : 'none';
     });
-  </script>
+  });
+});
+</script>
+
 </body>
 </html>
