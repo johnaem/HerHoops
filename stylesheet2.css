@@ -1,4 +1,114 @@
-/* WNBA page hero */
+:root {
+  --bg: #e6e6e6;
+  --brand: #f86300;
+  --accent: #ff7a22;
+  --brand-dark: #db4b07ef;
+  --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  --max-width: 1200px;
+  --page-padding: 20px;
+  --radius: 10px;
+  --text-color: #222;
+}
+
+/* Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Header / Nav */
+header {
+  background-color: var(--brand);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 12px clamp(16px, 4vw, 60px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  position: relative;
+  z-index: 10;
+}
+
+.logo img {
+  height: 60px;
+  display: block;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  margin-left: 0;
+  padding: 12px 16px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
+  font-size: clamp(14px, 1vw, 16px);
+  white-space: nowrap;
+  font-weight: 700;
+  border: 2px solid var(--brand-dark);
+}
+
+nav a:hover,
+nav a:focus {
+  background: white;
+  color: var(--brand);
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.nav-btn {
+  text-decoration: none;
+  margin-left: 15px;
+  padding: 10px 18px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
+  font-weight: bold;
+  border: 2px solid var(--brand-dark);
+  display: inline-block;
+}
+
+.nav-btn:hover,
+.nav-btn:focus {
+  background: white;
+  color: var(--brand);
+}
+
+
 .WNBA-hero {
   background: url("images/wnbabanner.jpg") no-repeat center/cover;
   min-height: clamp(320px, 45vh, 550px);
@@ -39,12 +149,15 @@
   font-size: clamp(14px, 2vw, 18px);
 }
 
-/* Tabs */
-.tabs-wrap {
+/* Page containers */
+.tabs-wrap,
+.panel,
+.highlights {
   width: min(100% - 32px, var(--max-width));
   margin: 40px auto 0;
 }
 
+/* Tabs */
 .tabs {
   display: flex;
   flex-wrap: wrap;
@@ -52,13 +165,14 @@
 }
 
 .tab {
+  text-decoration: none;
   padding: 12px 16px;
   min-height: 44px;
   border-radius: 6px;
-  border: 2px solid var(--brand-dark);
   background: var(--accent);
   color: white;
-  font-weight: 700;
+  font-weight: bold;
+  border: 2px solid var(--brand-dark);
   cursor: pointer;
   white-space: nowrap;
   transition: 0.25s ease;
@@ -72,14 +186,9 @@
   outline: none;
 }
 
-/* Main panel */
-.panel {
-  width: min(100% - 32px, var(--max-width));
-  margin: 20px auto 0;
-}
-
+/* Panel */
 .box {
-  background: white;
+  background: #fff;
   padding: 20px;
   border-radius: var(--radius);
   box-shadow: var(--card-shadow);
@@ -114,11 +223,6 @@ tbody td {
 }
 
 /* Highlights */
-.highlights {
-  width: min(100% - 32px, var(--max-width));
-  margin: 40px auto;
-}
-
 .highlights-title {
   margin-bottom: 18px;
   font-size: 28px;
@@ -188,7 +292,7 @@ tbody td {
 }
 
 /* Footer */
-.site-footer {
+footer {
   background: var(--brand);
   color: white;
   padding: 36px 20px 20px;
@@ -217,12 +321,12 @@ tbody td {
   margin-bottom: 6px;
 }
 
-.site-footer a {
+footer a {
   color: white;
   text-decoration: none;
 }
 
-.site-footer a:hover {
+footer a:hover {
   text-decoration: underline;
 }
 
@@ -230,6 +334,46 @@ tbody td {
   text-align: center;
   font-weight: 700;
   margin-top: 15px;
+}
+
+/* Mobile WNBA table cards */
+@media (max-width: 520px) {
+  table,
+  thead,
+  tbody,
+  tr,
+  th,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  tbody td {
+    border: 0;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: #555;
+    flex: 0 0 auto;
+  }
 }
 
 /* Responsive tweaks */
@@ -289,44 +433,6 @@ tbody td {
 
   .box {
     padding: 16px;
-  }
-
-  /* Mobile table cards */
-  table,
-  thead,
-  tbody,
-  tr,
-  th,
-  td {
-    display: block;
-    width: 100%;
-  }
-
-  thead {
-    display: none;
-  }
-
-  tbody tr {
-    background: #f9f9f9;
-    border-radius: 12px;
-    padding: 12px;
-    margin-bottom: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  }
-
-  tbody td {
-    border: 0;
-    padding: 8px 0;
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-  }
-
-  tbody td::before {
-    content: attr(data-label);
-    font-weight: 700;
-    color: #555;
-    flex: 0 0 auto;
   }
 
   .cta {
