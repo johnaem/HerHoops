@@ -459,7 +459,6 @@ footer a:hover {
   color: var(--brand-dark);
 }
 
-/* NCAA table styles for mobile */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -480,7 +479,6 @@ tbody td {
   overflow-wrap: anywhere;
 }
 
-/* Responsive tweaks */
 @media (max-width: 900px) {
   .cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
