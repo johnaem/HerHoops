@@ -1,9 +1,9 @@
-:root {
+:root{
   --bg: #e6e6e6;
   --brand: #f86300;
   --accent: #ff7a22;
   --brand-dark: #db4b07ef;
-  --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  --card-shadow: 0 4px 10px rgba(0,0,0,0.12);
   --max-width: 1200px;
   --page-padding: 20px;
   --radius: 10px;
@@ -11,17 +11,24 @@
 }
 
 /* Base */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+  font-family: Arial, Helvetica, sans-serif; 
 }
 
-html,
-body {
-  height: 100%;
+html, body {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
   overflow-x: hidden;
+}
+
+body { 
+  background-color: var(--bg); 
+  color: var(--text-color); 
+  line-height: 1.4; 
 }
 
 img {
@@ -35,12 +42,6 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
-body {
-  background-color: var(--bg);
-  color: var(--text-color);
-  line-height: 1.6;
-}
-
 /* Header / Nav */
 header {
   background-color: var(--brand);
@@ -49,20 +50,22 @@ header {
   align-items: center;
   gap: 16px;
   padding: 12px clamp(16px, 4vw, 60px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-  position: relative;
-  z-index: 10;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.logo img {
-  height: 60px;
-  display: block;
+.logo img { 
+  height: 60px; 
+  display:block; 
+  max-width: 100%;
 }
 
 nav {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  max-width: 100%;
+  min-width: 0;
 }
 
 nav a {
@@ -80,6 +83,7 @@ nav a {
   white-space: nowrap;
   font-weight: 700;
   border: 2px solid var(--brand-dark);
+  max-width: 100%;
 }
 
 nav a:hover,
@@ -92,7 +96,7 @@ nav a:focus {
 
 .nav-btn {
   text-decoration: none;
-  margin-left: 15px;
+  margin-left: 0;
   padding: 10px 18px;
   border-radius: 6px;
   background: var(--accent);
@@ -100,6 +104,7 @@ nav a:focus {
   font-weight: bold;
   border: 2px solid var(--brand-dark);
   display: inline-block;
+  max-width: 100%;
 }
 
 .nav-btn:hover,
@@ -111,7 +116,7 @@ nav a:focus {
 /* Hero */
 .hero {
   background: url("images/homepage banner.jpg") no-repeat center/cover;
-  min-height: clamp(320px, 45vh, 550px);
+  min-height: clamp(280px, 45vh, 550px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,13 +126,18 @@ nav a:focus {
   overflow: hidden;
   margin-top: 12px;
   border-radius: 0 0 24px 24px;
+  width: 100%;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.55) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
   z-index: 0;
 }
 
@@ -136,17 +146,20 @@ nav a:focus {
   z-index: 1;
   padding: 0 clamp(16px, 5vw, 40px);
   max-width: 800px;
+  width: 100%;
 }
 
 .hero h1 {
   font-size: clamp(28px, 5vw, 48px);
   margin-bottom: 12px;
   line-height: 1.1;
+  overflow-wrap: anywhere;
 }
 
 .hero p {
   margin-bottom: 18px;
   font-size: clamp(14px, 2vw, 18px);
+  overflow-wrap: anywhere;
 }
 
 .hero-btn {
@@ -162,6 +175,7 @@ nav a:focus {
   align-items: center;
   justify-content: center;
   transition: 0.25s ease;
+  max-width: 100%;
 }
 
 .hero-btn:hover,
@@ -185,23 +199,27 @@ main,
   padding: 28px;
   border-radius: var(--radius);
   box-shadow: var(--card-shadow);
+  min-width: 0;
 }
 
 .mission h2 {
   margin-bottom: 12px;
   font-size: 24px;
+  overflow-wrap: anywhere;
 }
 
 /* Featured cards */
 .featured h2 {
   margin-bottom: 18px;
   font-size: 28px;
+  overflow-wrap: anywhere;
 }
 
 .cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
+  width: 100%;
 }
 
 .card {
@@ -210,6 +228,7 @@ main,
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.18s ease, box-shadow 0.18s ease;
+  min-width: 0;
 }
 
 .card:focus-within,
@@ -229,6 +248,7 @@ main,
   padding: 14px;
   font-size: 18px;
   line-height: 1.4;
+  overflow-wrap: anywhere;
 }
 
 /* Games */
@@ -247,55 +267,67 @@ main,
   padding: 18px;
   box-shadow: var(--card-shadow);
   border-radius: 8px;
+  min-width: 0;
 }
 
 .game-box p {
   margin-bottom: 12px;
+  overflow-wrap: anywhere;
 }
+
 /* Footer */
-footer { 
-  background: var(--brand); 
-  color: white; 
-  padding: 36px 40px 20px;
+footer {
+  background: var(--brand);
+  color: white;
+  padding: 36px 20px 20px;
+  margin-top: auto;
+  width: 100%;
 }
 
-
-.footer-container { 
-  display: flex; 
+.footer-container {
+  display: flex;
   align-items: flex-start;
-  justify-content: space-between;  
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
   max-width: 1100px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .footer-logo img {
   height: 80px;
   display: block;
+  max-width: 100%;
 }
 
 .footer-columns {
   display: flex;
-  gap: 30px;         
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
-
 
 .footer-column {
   min-width: 180px;
+  flex: 1 1 180px;
+  max-width: 100%;
 }
 
-
-footer h3 { 
-  margin-bottom: 8px; 
+footer h3 {
+  margin-bottom: 8px;
 }
 
-footer p { 
-  margin-bottom: 6px; 
+footer p {
+  margin-bottom: 6px;
+  overflow-wrap: anywhere;
 }
 
 footer a {
   color: white;
   text-decoration: none;
 }
+
 footer a:hover {
   text-decoration: underline;
 }
@@ -305,12 +337,14 @@ footer a:hover {
   text-align: center;
   font-weight: 700;
   margin-top: 15px;
+  width: 100%;
 }
 
 /* Contact/Feedback Page */
 .contact-wrapper {
   background: #e6e6e6;
   padding: 40px 20px 80px;
+  width: 100%;
 }
 
 .contact-grid {
@@ -319,6 +353,7 @@ footer a:hover {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 30px;
+  width: 100%;
 }
 
 .contact-card {
@@ -326,11 +361,13 @@ footer a:hover {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  min-width: 0;
 }
 
 .contact-card h2,
 .contact-card h3 {
   margin-bottom: 10px;
+  overflow-wrap: anywhere;
 }
 
 .sub-text {
@@ -356,11 +393,13 @@ footer a:hover {
   border: none;
   background: #ddd;
   font-size: 16px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .contact-card textarea {
   height: 80px;
-  resize: none;
+  resize: vertical;
 }
 
 .send-btn {
@@ -383,6 +422,7 @@ footer a:hover {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  min-width: 0;
 }
 
 .social-item {
@@ -391,6 +431,7 @@ footer a:hover {
   gap: 12px;
   margin-top: 10px;
   font-size: 16px;
+  min-width: 0;
 }
 
 .social-item i {
@@ -402,6 +443,7 @@ footer a:hover {
   text-decoration: none;
   color: #333;
   font-weight: 600;
+  overflow-wrap: anywhere;
 }
 
 .social-link:visited {
@@ -428,12 +470,14 @@ thead th {
   padding: 14px 12px;
   font-size: 0.98rem;
   border-bottom: 2px solid #eee;
+  overflow-wrap: anywhere;
 }
 
 tbody td {
   padding: 14px 12px;
   border-bottom: 1px solid #eee;
   vertical-align: top;
+  overflow-wrap: anywhere;
 }
 
 /* Responsive tweaks */
@@ -451,7 +495,7 @@ tbody td {
   }
 
   .footer-container {
-    grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
 }
 
@@ -467,8 +511,10 @@ tbody td {
     justify-content: center;
   }
 
-  nav a {
+  nav a,
+  .nav-btn {
     width: 100%;
+    text-align: center;
   }
 
   .cards {
@@ -479,15 +525,26 @@ tbody td {
     min-height: 320px;
   }
 
+  .hero-btn {
+    width: 100%;
+    margin: 6px 0;
+  }
+
   .footer-container {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    justify-items: center;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
   }
 
   .footer-column {
     min-width: 0;
-    justify-items: center;
+    flex: 1 1 auto;
   }
 }
 
@@ -507,17 +564,29 @@ tbody td {
     font-size: 0.98rem;
   }
 
-  .hero-btn {
-    width: 100%;
-    margin: 6px 0;
-  }
-
   .contact-wrapper {
     padding: 24px 12px 60px;
   }
 
   .contact-card {
     padding: 16px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .tabs-wrap {
+    width: min(100% - 20px, var(--max-width));
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+  }
+
+  .tab {
+    flex: 1 1 120px;
+    text-align: center;
   }
 
   /* Stack table into cards */
