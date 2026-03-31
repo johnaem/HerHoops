@@ -10,17 +10,17 @@
   <style>
     .WNBA-hero {
       background: url("images/wnbabanner.jpg") no-repeat center/cover;
-      color: #fff;
       padding: 4rem 1rem;
       position: relative;
       overflow: hidden;
+      color: white;
     }
 
     .WNBA-hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.6) 100%);
+      background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.55) 100%);
       z-index: 0;
     }
 
@@ -29,20 +29,20 @@
       z-index: 1;
       max-width: 1200px;
       margin: 0 auto;
+      text-align: center;
     }
 
     .WNBA-hero h1 {
       margin: 0 0 0.5rem;
-      font-size: clamp(2rem, 5vw, 3.8rem);
+      font-size: clamp(2rem, 5vw, 3.5rem);
       line-height: 1.1;
-      color: #fff;
+      color: white;
     }
 
     .WNBA-hero p {
       margin: 0;
       font-size: clamp(1rem, 2.5vw, 1.2rem);
-      max-width: 42rem;
-      color: rgba(255, 255, 255, 0.92);
+      color: white;
     }
   </style>
 </head>
