@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap');
+
 :root {
   --bg: #e6e6e6;
   --brand: #f86300;
@@ -15,7 +17,7 @@
   box-sizing: border-box; 
   margin: 0; 
   padding: 0; 
-  font-family: Arial, Helvetica, sans-serif; 
+  font-family: 'Inter', Arial, Helvetica, sans-serif; 
 }
 
 html, body {
@@ -29,6 +31,7 @@ body {
   background-color: var(--bg); 
   color: var(--text-color); 
   line-height: 1.4; 
+  font-size: 16px;
 }
 
 img {
@@ -49,14 +52,17 @@ header {
   width: 100%;
 }
 
-.logo img { 
-  height: 60px; 
+.logo img {
+  height: 60px;
+  max-width: 100%;
 }
 
 nav {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  max-width: 100%;
+  min-width: 0;
 }
 
 nav a,
@@ -70,21 +76,31 @@ nav a,
   border-radius: 6px;
   background: var(--accent);
   color: white;
+  font-size: clamp(14px, 1vw, 16px);
+  white-space: nowrap;
   font-weight: 700;
   border: 2px solid var(--brand-dark);
+  max-width: 100%;
+  font-family: 'Oswald', Arial, sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 nav a:hover,
-.nav-btn:hover {
+nav a:focus,
+.nav-btn:hover,
+.nav-btn:focus {
   background: white;
   color: var(--brand);
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
 }
 
 /* Tabs */
 .tabs-wrap {
-  max-width: var(--max-width);
-  width: min(100% - 32px, var(--max-width));
-  margin: 18px auto;
+  max-width: 1200px;
+  width: min(100% - 32px, 1200px);
+  margin: 24px auto 10px;
 }
 
 .tabs {
@@ -95,18 +111,31 @@ nav a:hover,
 }
 
 .tab {
-  padding: 14px 28px;
-  border-radius: 30px;
+  padding: 12px 22px;
+  border-radius: 999px;
   background: white;
   border: 2px solid var(--brand-dark);
   font-weight: 700;
   cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Oswald', Arial, sans-serif;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.tab:hover {
+  transform: translateY(-2px);
 }
 
 .tab.active {
   background: linear-gradient(var(--accent), #f9a07a);
   color: white;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+/* Hide/show cards */
+.player-card.hidden {
+  display: none;
 }
 
 /* Cards Layout */
@@ -152,6 +181,9 @@ nav a:hover,
   font-size: 18px;
   margin: 6px 0;
   font-weight: 800;
+  font-family: 'Oswald', Arial, sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .player-info {
@@ -165,6 +197,11 @@ nav a:hover,
   margin-bottom: 6px;
 }
 
+.player-info li strong {
+  color: var(--brand-dark);
+  font-weight: 700;
+}
+
 .card-cta {
   margin-top: 10px;
   background: var(--accent);
@@ -175,6 +212,15 @@ nav a:hover,
   font-weight: 700;
   border: 2px solid var(--brand);
   display: inline-block;
+  font-family: 'Oswald', Arial, sans-serif;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.card-cta:hover,
+.card-cta:focus {
+  background: white;
+  color: var(--brand);
 }
 
 /* Footer */
