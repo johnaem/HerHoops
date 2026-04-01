@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Players' Stories — Her Hoops</title>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="stylesheet3.css">
 
 <style>
@@ -43,6 +43,44 @@
   color: white;
 }
 
+/* Tabs */
+.tabs-wrap {
+  max-width: 1200px;
+  width: min(100% - 32px, 1200px);
+  margin: 24px auto 10px;
+}
+
+.tabs {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: white;
+  border: 2px solid var(--brand-dark);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  transform: translateY(-2px);
+}
+
+.tab.active {
+  background: linear-gradient(var(--accent), #f9a07a);
+  color: white;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+/* Hide/show cards */
+.player-card.hidden {
+  display: none;
+}
 </style>
 </head>
 
