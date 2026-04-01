@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap');
+
 :root {
   --bg: #e6e6e6;
   --brand: #f86300;
@@ -15,7 +17,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
 html,
@@ -84,6 +86,10 @@ nav a,
   font-weight: 700;
   border: 2px solid var(--brand-dark);
   max-width: 100%;
+  font-family: 'Oswald', Arial, sans-serif;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  line-height: 1;
 }
 
 nav a:hover,
@@ -137,6 +143,9 @@ nav a:focus,
   margin-bottom: 12px;
   line-height: 1.1;
   overflow-wrap: anywhere;
+  font-family: 'Oswald', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .hero p {
@@ -159,6 +168,10 @@ nav a:focus,
   justify-content: center;
   transition: 0.25s ease;
   max-width: 100%;
+  font-family: 'Oswald', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1;
 }
 
 .hero-btn:hover,
@@ -189,6 +202,8 @@ main,
   margin-bottom: 12px;
   font-size: 24px;
   overflow-wrap: anywhere;
+  font-family: 'Oswald', Arial, sans-serif;
+  letter-spacing: 0.6px;
 }
 
 /* Featured cards */
@@ -196,6 +211,8 @@ main,
   margin-bottom: 18px;
   font-size: 28px;
   overflow-wrap: anywhere;
+  font-family: 'Oswald', Arial, sans-serif;
+  letter-spacing: 0.6px;
 }
 
 .cards {
@@ -242,6 +259,8 @@ main,
   font-size: 18px;
   line-height: 1.4;
   overflow-wrap: anywhere;
+  font-family: 'Oswald', Arial, sans-serif;
+  letter-spacing: 0.4px;
 }
 
 /* Games */
@@ -308,6 +327,9 @@ footer {
 
 footer h3 {
   margin-bottom: 8px;
+  font-family: 'Oswald', Arial, sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 footer p {
@@ -318,6 +340,9 @@ footer p {
 footer a {
   color: white;
   text-decoration: none;
+  font-family: 'Oswald', Arial, sans-serif;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
 }
 
 footer a:hover {
@@ -360,6 +385,8 @@ footer a:hover {
 .contact-card h3 {
   margin-bottom: 10px;
   overflow-wrap: anywhere;
+  font-family: 'Oswald', Arial, sans-serif;
+  letter-spacing: 0.5px;
 }
 
 .sub-text {
@@ -404,6 +431,10 @@ footer a:hover {
   font-weight: bold;
   cursor: pointer;
   min-height: 44px;
+  font-family: 'Oswald', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1;
 }
 
 .send-btn:hover {
@@ -463,6 +494,9 @@ thead th {
   font-size: 0.98rem;
   border-bottom: 2px solid #eee;
   overflow-wrap: anywhere;
+  font-family: 'Oswald', Arial, sans-serif;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
 }
 
 tbody td {
