@@ -76,16 +76,16 @@ nav a,
   border-radius: 6px;
   background: var(--accent);
   color: white;
-  font-size: clamp(14px, 1vw, 16px);
+  font-size: clamp(13px, 0.95vw, 15px);
   white-space: nowrap;
   font-weight: 700;
   border: 2px solid var(--brand-dark);
   max-width: 100%;
 
-  /* ESPN-style font */
   font-family: 'Oswald', Arial, sans-serif;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.3px;
   text-transform: uppercase;
+  line-height: 1;
 }
 
 nav a:hover,
