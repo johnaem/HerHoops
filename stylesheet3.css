@@ -30,7 +30,7 @@ html, body {
 body { 
   background-color: var(--bg); 
   color: var(--text-color); 
-  line-height: 1.4; 
+  line-height: 1.5; 
   font-size: 16px;
 }
 
@@ -81,8 +81,10 @@ nav a,
   font-weight: 700;
   border: 2px solid var(--brand-dark);
   max-width: 100%;
+
+  /* ESPN-style font */
   font-family: 'Oswald', Arial, sans-serif;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
 }
 
@@ -118,8 +120,10 @@ nav a:focus,
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease;
+
+  /* ESPN-style */
   font-family: 'Oswald', Arial, sans-serif;
-  letter-spacing: 0.8px;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
@@ -178,11 +182,13 @@ nav a:focus,
 }
 
 .player-name {
-  font-size: 18px;
+  font-size: 20px;
   margin: 6px 0;
   font-weight: 800;
+
+  /* ESPN headline feel */
   font-family: 'Oswald', Arial, sans-serif;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.7px;
   text-transform: uppercase;
 }
 
@@ -211,16 +217,13 @@ nav a:focus,
   border-radius: 8px;
   font-weight: 700;
   border: 2px solid var(--brand);
-  display: inline-block;
-  font-family: 'Oswald', Arial, sans-serif;
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
-}
 
-.card-cta:hover,
-.card-cta:focus {
-  background: white;
-  color: var(--brand);
+  /* ESPN button style */
+  font-family: 'Oswald', Arial, sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  display: inline-block;
 }
 
 /* Footer */
@@ -258,6 +261,9 @@ footer {
 footer a {
   color: white;
   text-decoration: none;
+
+  font-family: 'Oswald', Arial, sans-serif;
+  letter-spacing: 0.5px;
 }
 
 footer a:hover {
