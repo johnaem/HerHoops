@@ -168,12 +168,12 @@ tbody tr:nth-child(even) {
 
 .cards-row {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
   gap: 20px;
+  justify-content: center; 
   width: min(100% - 32px, var(--max-width));
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0;
 }
 
 .highlight-card {
