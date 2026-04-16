@@ -27,7 +27,7 @@
 .tab {
   padding: 8px 16px;
   border-radius: 20px;
-  background: white;
+  background: #fff;
   border: 1px solid #ccc;
   font-weight: bold;
   cursor: pointer;
@@ -35,13 +35,13 @@
 
 .tab.active {
   background: var(--accent);
-  color: white;
+  color: #fff;
   border-color: var(--brand);
 }
 
-/* Content box */
+/* Generic content box */
 .box {
-  background: white;
+  background: #fff;
   padding: 16px;
   border-radius: 8px;
   border: 1px solid #ccc;
@@ -68,37 +68,9 @@ tbody tr:nth-child(even) {
   background: #fafafa;
 }
 
-/* Recent games */
-#recent ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  max-width: 100%;
-}
-
-#recent li {
-  font-weight: 400;
-  overflow-wrap: anywhere;
-}
-
-#transaction ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  max-width: 100%;
-}
-
-#transaction li {
-  font-weight: 400;
-  overflow-wrap: anywhere;
-}
-
+/* Shared list styles */
+#recent ul,
+#transaction ul,
 #transfer ul {
   list-style: none;
   padding: 0;
@@ -109,11 +81,66 @@ tbody tr:nth-child(even) {
   max-width: 100%;
 }
 
+#recent li,
+#transaction li,
 #transfer li {
   font-weight: 400;
   overflow-wrap: anywhere;
 }
 
+/* Shared card grid */
+.transfer-grid,
+.transactions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* Shared cards */
+.transfer-card,
+.transaction-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.transfer-card h4,
+.transaction-card h4 {
+  margin: 0 0 10px;
+}
+
+.transfer-card p,
+.transaction-card p {
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+.transaction-card {
+  position: relative;
+}
+
+.transaction-card p {
+  font-size: 14px;
+}
+
+.transaction-date {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #777;
+}
+
+.wnba-transactions {
+  padding: 20px;
+}
+
+.wnba-transactions h2 {
+  margin-bottom: 16px;
+}
+
+/* Recent games */
 .score-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -170,7 +197,7 @@ tbody tr:nth-child(even) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
   gap: 20px;
-  justify-content: center; 
+  justify-content: center;
   width: min(100% - 32px, var(--max-width));
   max-width: var(--max-width);
   margin: 0 auto;
@@ -178,7 +205,7 @@ tbody tr:nth-child(even) {
 
 .highlight-card {
   width: 100%;
-  background: white;
+  background: #fff;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--card-shadow);
@@ -203,13 +230,13 @@ tbody tr:nth-child(even) {
 
 .card-body h3 {
   font-size: 16px;
-  margin: 0 0 10px 0;
+  margin: 0 0 10px;
   overflow-wrap: anywhere;
 }
 
 .cta {
   background: var(--accent);
-  color: white;
+  color: #fff;
   text-decoration: none;
   padding: 8px 12px;
   text-align: center;
@@ -258,7 +285,9 @@ tbody tr:nth-child(even) {
     height: 130px;
   }
 
-  #recent ul {
+  #recent ul,
+  #transaction ul,
+  #transfer ul {
     gap: 12px;
   }
 }
