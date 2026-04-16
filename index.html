@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,54 +7,66 @@
 <link rel="stylesheet" href="stylesheet.css">
 <link rel="stylesheet" href="base.css">
 <style>
-    .index-hero {
-  background: url("images/defaultbanner.jpg") no-repeat center/cover;
-  height: clamp(380px, 45vh, 550px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  position: relative;
-  overflow: hidden;
-}
+  .index-hero {
+    background: url("images/defaultbanner.jpg") no-repeat center/cover;
+    height: clamp(380px, 45vh, 550px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
 
-.index-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.55) 100%);
-  z-index: 0;
-}
-.index-hero-content { 
-  position: relative;
-  z-index: 1; 
-  padding: 0 clamp(12px, 5vw, 40px); 
-}
-.index-hero h1 {
-  font-size: clamp(28px, 4vw, 48px); 
-  margin-bottom: 12px; 
-}
-.index-hero p { 
-  margin-bottom: 18px; 
-  font-size: clamp(14px, 1.6vw, 18px); 
-}
-.index-hero-btn {
-  text-decoration: none;
-  padding: 10px 18px;
-  margin: 8px;
-  border-radius: 6px;
-  color: white;
-  font-weight: bold;
-  border: 2px solid var(--brand-dark);
-  display: inline-block;
-  transition: 0.25s ease;
-}
-.index-hero-btn:hover,
-.index-hero-btn:focus {
-  background: white;
-  color: var(--brand);
-}
+  .index-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.55) 100%);
+    z-index: 0;
+  }
+
+  .index-hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 clamp(12px, 5vw, 40px);
+  }
+
+  .index-hero h1 {
+    font-size: clamp(28px, 4vw, 48px);
+    margin-bottom: 12px;
+  }
+
+  .index-hero p {
+    margin-bottom: 18px;
+    font-size: clamp(14px, 1.6vw, 18px);
+  }
+
+  .hero-btn {
+    text-decoration: none;
+    padding: 10px 18px;
+    margin: 8px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    border: 2px solid var(--brand-dark);
+    display: inline-block;
+    transition: 0.25s ease;
+  }
+
+  .hero-btn:hover,
+  .hero-btn:focus {
+    background: white;
+    color: var(--brand);
+  }
+
+  .mission-icon {
+    height: 40px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
 </style>
 </head>
 
@@ -62,39 +74,42 @@
 
 <!-- NAVBAR -->
 <header>
-    <div class="logo">
-        <a href="index.html">
-    <img src="images/logo.png" alt="Her Hoops Logo">
-        </a>
-</div>
-    <nav>
-        <a href="#">Home</a>
-        <a href="NCAACollegeBasketball.html">NCAA College Basketball</a>
-        <a href="WNBACoverage.html">WNBA Coverage</a>
-        <a href="PlayersStories.html">Players' Stories</a>
-        <a href="Contact.html">Contact/Feedback</a>
-    </nav>
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/logo.png" alt="Her Hoops Logo">
+    </a>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="NCAACollegeBasketball.html">NCAA College Basketball</a>
+    <a href="WNBACoverage.html">WNBA Coverage</a>
+    <a href="PlayersStories.html">Players' Stories</a>
+    <a href="Contact.html">Contact/Feedback</a>
+  </nav>
 </header>
 
 <!-- HERO -->
 <section class="index-hero">
-    <div class="index-hero-content">
-        <h1>Welcome to Her Hoops</h1>
-        <p>Your destination for coverage of women's basketball — from college courts to the WNBA</p>
-        <a href="NCAACollegeBasketball.html" class="hero-btn">College Basketball</a>
-        <a href="WNBACoverage.html" class="hero-btn">WNBA</a>
-    </div>
+  <div class="index-hero-content">
+    <h1>Welcome to Her Hoops</h1>
+    <p>Your destination for coverage of women's basketball — from college courts to the WNBA</p>
+    <a href="NCAACollegeBasketball.html" class="hero-btn">College Basketball</a>
+    <a href="WNBACoverage.html" class="hero-btn">WNBA</a>
+  </div>
 </section>
 
 <!-- MISSION -->
 <section class="mission">
-    <h2><img src="images/trophy.png" style="height: 40px; width: auto; vertical-align: middle; margin-right: 8px;">Our Mission</h2>
-    <p>
-        Here at Her Hoops, we are dedicated to celebrating women’s basketball at every level. From NCAA tournaments to WNBA 
-        championships, we provide in-depth coverage, player highlights, and featured stories. Our content is sourced from 
-        trusted outlets such as ESPN, official NCAA and WNBA platforms, and verified team websites to ensure accuracy and 
-        reliability. Join us in supporting the growth of women’s basketball!
-    </p>
+  <h2>
+    <img src="images/trophy.png" alt="Trophy icon" class="mission-icon">
+    Our Mission
+  </h2>
+  <p>
+    Here at Her Hoops, we are dedicated to celebrating women’s basketball at every level. From NCAA tournaments to WNBA
+    championships, we provide in-depth coverage, player highlights, and featured stories. Our content is sourced from
+    trusted outlets such as ESPN, official NCAA and WNBA platforms, and verified team websites to ensure accuracy and
+    reliability. Join us in supporting the growth of women’s basketball!
+  </p>
 </section>
 
 <!-- FEATURED STORIES -->
@@ -124,171 +139,168 @@
     </a>
   </div>
 </section>
+
 <br><br>
+
 <!-- GAMES -->
 <section class="games">
-    <div>
-  <h2>Upcoming College Games</h2>
+  <div>
+    <h2>Latest NCAA College Basketball Games</h2>
 
-  <div class="upcoming-mini-grid">
-
-    <div class="mini-game-card">
-      <div class="mini-top">
-        <span>Feb 14</span>
-        <span class="mini-network">ESPN</span>
+    <div class="upcoming-mini-grid">
+      <div class="mini-game-card empty">
+        <div class="mini-matchup">
+          <div class="mini-team">No Games Right Now</div>
+          <div class="mini-vs">—</div>
+          <div class="mini-subtext">Check back soon for updates</div>
+        </div>
       </div>
-
-      <div class="mini-matchup">
-        <div class="mini-team">South Carolina</div>
-        <div class="mini-vs">VS</div>
-        <div class="mini-team">LSU</div>
-      </div>
-
-      <div class="mini-time">8:30 PM</div>
     </div>
-
-    <div class="mini-game-card">
-      <div class="mini-top">
-        <span>Feb 15</span>
-        <span class="mini-network">SECN</span>
-      </div>
-
-      <div class="mini-matchup">
-        <div class="mini-team">Vanderbilt</div>
-        <div class="mini-vs">VS</div>
-        <div class="mini-team">Georgia</div>
-      </div>
-
-      <div class="mini-time">12:00 PM</div>
-    </div>
-
   </div>
-</div>
 
-    <div>
-  <h2>Latest WNBA Games</h2>
+  <div>
+    <h2>Latest WNBA Games</h2>
 
-  <div class="upcoming-mini-grid">
-
-    <div class="mini-game-card empty">
-      <div class="mini-matchup">
-        <div class="mini-team">No Games Right Now</div>
-        <div class="mini-vs">—</div>
-        <div class="mini-subtext">Check back soon for updates</div>
+    <div class="upcoming-mini-grid">
+      <div class="mini-game-card empty">
+        <div class="mini-matchup">
+          <div class="mini-team">No Games Right Now</div>
+          <div class="mini-vs">—</div>
+          <div class="mini-subtext">Check back soon for updates</div>
+        </div>
       </div>
     </div>
-
   </div>
-</div>
 </section>
-    <br>
+
+<br>
+
+<!-- PLAYER VOTE -->
 <section class="player-vote-section">
-  <h2>Player of the Week Voting</h2>
+  <h2>College Player of the Week Voting</h2>
   <p>Cast your vote for the player who stood out this week.</p>
 
   <div class="player-grid" id="playerGrid">
-    <div class="player-card" data-player="Alyssa">
-      <img src="images/player1.jpg" alt="Alyssa">
-      <h3>Alyssa</h3>
+    <div class="player-card" data-player="Lauren Betts" data-key="lauren-betts">
+      <img src="images/laurenbetts.png" alt="Lauren Betts">
+      <h3>Lauren Betts</h3>
       <button class="vote-btn">Vote</button>
       <div class="results">
-        <div class="bar"><div class="fill" id="bar-Alyssa"></div></div>
-        <span id="count-Alyssa">0 votes</span>
+        <div class="bar"><div class="fill" id="bar-lauren-betts"></div></div>
+        <span id="count-lauren-betts">0 votes</span>
       </div>
     </div>
 
-    <div class="player-card" data-player="Jada">
-      <img src="images/player2.jpg" alt="Jada">
-      <h3>Jada</h3>
+    <div class="player-card" data-player="Raven Johnson" data-key="raven-johnson">
+      <img src="images/ravenjohnson.png" alt="Raven Johnson">
+      <h3>Raven Johnson</h3>
       <button class="vote-btn">Vote</button>
       <div class="results">
-        <div class="bar"><div class="fill" id="bar-Jada"></div></div>
-        <span id="count-Jada">0 votes</span>
+        <div class="bar"><div class="fill" id="bar-raven-johnson"></div></div>
+        <span id="count-raven-johnson">0 votes</span>
       </div>
     </div>
 
-    <div class="player-card" data-player="Mia">
-      <img src="images/player3.jpg" alt="Mia">
-      <h3>Mia</h3>
+    <div class="player-card" data-player="Madison Booker" data-key="madison-booker">
+      <img src="images/madisonbooker.png" alt="Madison Booker">
+      <h3>Madison Booker</h3>
       <button class="vote-btn">Vote</button>
       <div class="results">
-        <div class="bar"><div class="fill" id="bar-Mia"></div></div>
-        <span id="count-Mia">0 votes</span>
+        <div class="bar"><div class="fill" id="bar-madison-booker"></div></div>
+        <span id="count-madison-booker">0 votes</span>
       </div>
     </div>
 
-    <div class="player-card" data-player="Zoe">
-      <img src="images/player4.jpg" alt="Zoe">
-      <h3>Zoe</h3>
+    <div class="player-card" data-player="Sarah Strong" data-key="sarah-strong">
+      <img src="images/sarahstrong.png" alt="Sarah Strong">
+      <h3>Sarah Strong</h3>
       <button class="vote-btn">Vote</button>
       <div class="results">
-        <div class="bar"><div class="fill" id="bar-Zoe"></div></div>
-        <span id="count-Zoe">0 votes</span>
+        <div class="bar"><div class="fill" id="bar-sarah-strong"></div></div>
+        <span id="count-sarah-strong">0 votes</span>
       </div>
     </div>
   </div>
 
   <p id="voteMessage"></p>
 </section>
-  <!-- Footer -->
+
+<!-- FOOTER -->
 <footer>
-    <div class="footer-container">
-        <div class="footer-logo">
+  <div class="footer-container">
+    <div class="footer-logo">
       <img src="images/logo.png" alt="Her Hoops Logo">
     </div>
-        <div class="footer-column">
-    <h3>Quick Links</h3>
-    <p><a href="NCAACollegeBasketball.html">NCAA College Basketball</a></p>
-    <p><a href="WNBACoverage.html">WNBA Coverage</a></p>
-    <p><a href="PlayersStories.html">Players' Stories</a></p>
-    <p><a href="Contact.html">Contact/Feedback</a></p>
-    </div>
-        <div class="footer-column">
-    <h3>Social Media</h3>
-    <p><a href="https://www.instagram.com">Instagram</a></p>
-    <p><a href="https://www.tiktok.com">TikTok</a></p>
-</div>
+
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <p><a href="NCAACollegeBasketball.html">NCAA College Basketball</a></p>
+      <p><a href="WNBACoverage.html">WNBA Coverage</a></p>
+      <p><a href="PlayersStories.html">Players' Stories</a></p>
+      <p><a href="Contact.html">Contact/Feedback</a></p>
     </div>
 
-    <div class="copyright">
-        © 2026 Her Hoops. All rights reserved.
+    <div class="footer-column">
+      <h3>Social Media</h3>
+      <p><a href="https://www.instagram.com">Instagram</a></p>
+      <p><a href="https://www.tiktok.com">TikTok</a></p>
     </div>
+  </div>
+
+  <div class="copyright">
+    © 2026 Her Hoops. All rights reserved.
+  </div>
 </footer>
-    <script>
+
+<script>
   const votes = {
-    Alyssa: 0,
-    Jada: 0,
-    Mia: 0,
-    Zoe: 0
+    "Lauren Betts": 0,
+    "Raven Johnson": 0,
+    "Madison Booker": 0,
+    "Sarah Strong": 0
   };
 
   const storageKey = "herHoopsVote";
   const voteMessage = document.getElementById("voteMessage");
 
+  function slugify(name) {
+    return name.toLowerCase().replace(/\s+/g, "-");
+  }
+
   function updateResults() {
     const totalVotes = Object.values(votes).reduce((sum, value) => sum + value, 0);
 
     for (const player in votes) {
-      const countEl = document.getElementById(`count-${player}`);
-      const barEl = document.getElementById(`bar-${player}`);
+      const key = slugify(player);
+      const countEl = document.getElementById(`count-${key}`);
+      const barEl = document.getElementById(`bar-${key}`);
       const playerVotes = votes[player];
       const percent = totalVotes === 0 ? 0 : (playerVotes / totalVotes) * 100;
 
-      countEl.textContent = `${playerVotes} vote${playerVotes !== 1 ? "s" : ""}`;
-      barEl.style.width = `${percent}%`;
+      if (countEl) {
+        countEl.textContent = `${playerVotes} vote${playerVotes !== 1 ? "s" : ""}`;
+      }
+
+      if (barEl) {
+        barEl.style.width = `${percent}%`;
+      }
     }
   }
 
   function loadSavedVote() {
     const savedVote = localStorage.getItem(storageKey);
+
     if (savedVote && votes.hasOwnProperty(savedVote)) {
       votes[savedVote] = 1;
+
       document.querySelectorAll(".vote-btn").forEach(btn => {
         btn.disabled = true;
         btn.textContent = "Voted";
       });
+
       voteMessage.textContent = `You already voted for ${savedVote}.`;
     }
+
     updateResults();
   }
 
@@ -319,4 +331,3 @@
 </script>
 </body>
 </html>
-
